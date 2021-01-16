@@ -9,6 +9,8 @@
     grid-template-areas:    "head head head"
                             "side1 cent side2"
                             "foot foot foot";
+    grid-template-rows: 10% 80% 10%;
+    grid-template-columns: 1fr 200px 1fr;
 }
 
 .header {
@@ -20,14 +22,21 @@
 
 .center {
     grid-area: cent;
-    margin-top: 40%;
-    margin-bottom: 60%;
     color: white;
+    display: grid;
+    grid-template-rows: 20px 20px 50px;
+}
+
+.deepImage {
+    width: 100%;
+    height: auto;
+    margin: 10 auto;
 }
 
 .footer {
     grid-area: foot;
     background-image: url("GODtext.png");
     background-repeat: repeat-x;
+    background-position: bottom;
     background-size: contain;
 }
