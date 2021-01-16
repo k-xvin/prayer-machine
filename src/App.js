@@ -1,7 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App() {    
+    const deepai = require('deepai');
+
+    deepai.setApiKey('quickstart-QUdJIGlzIGNvbWluZy4uLi4K');
+
+    async function getTextToImage(){
+        var resp = await deepai.callStandardApi("text2img", {
+            text: "YOUR_TEXT_URL",
+        });
+        console.log(resp);
+        console.log("prayed");
+    }
+
     return (
         <div className="main">
             <div className="header"> </div>
@@ -9,7 +21,9 @@ function App() {
                 <div> 
                     welcome to church
                 </div>
-                <button> 
+                <button
+                    onClick={() => getTextToImage()}
+                > 
                     Pray
                 </button>
             </div>
