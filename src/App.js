@@ -38,6 +38,9 @@ function App() {
 
     return (
         <div className="main">
+            <div className="noise-wrapper">
+                <div className="noise"> </div>
+            </div>
             <div className="header"> </div>
             <div className="center"> 
                 <div> 
