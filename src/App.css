@@ -10,13 +10,14 @@
                             "side1 cent side2"
                             "foot foot foot";
     grid-template-rows: 10% 80% 10%;
-    grid-template-columns: 1fr 200px 1fr;
+    grid-template-columns: 1fr 400px 1fr;
 }
 
 .header {
     grid-area: head;
     background-image: url("GODtext.png");
     background-repeat: repeat-x;
+    background-position: top;
     background-size: contain;
 }
 

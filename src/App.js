@@ -10,12 +10,28 @@ function App() {
     // Holds the url to the image from deepai
     let [deepImageURL, setDeepImageURL] = useState("");
 
+    // Track the loading
+    let [isLoading, setIsLoading] = useState(false);
+
     async function getTextToImage(){
-        var resp = await deepai.callStandardApi("text2img", {
+        setIsLoading(true);
+
+        // Get an DeepAI image
+        var godImage = await deepai.callStandardApi("text2img", {
             text: "god "
         });
-        setDeepImageURL(resp.output_url);
-        console.log(resp);
+        console.log(godImage);
+
+        // Pass it through another DeepAI filter
+        var dreamedGod = await deepai.callStandardApi("deepdream", {
+            image: godImage.output_url
+        });
+        console.log(dreamedGod);
+
+        setDeepImageURL(dreamedGod.output_url);
+
+        setIsLoading(false);
+
         console.log("prayed");
     }
 
@@ -28,7 +44,12 @@ function App() {
                 </div>
                 <button
                     style={{width:"100px", margin:"0 auto"}}
-                    onClick={() => getTextToImage()}
+                    onClick={() => {
+                        if(!isLoading){
+                            console.log("calling images");
+                            getTextToImage()  
+                        }
+                    }}
                 > 
                     Pray
                 </button>
