@@ -10,7 +10,7 @@
                             "side1 cent side2"
                             "foot foot foot";
     grid-template-rows: 10% 80% 10%;
-    grid-template-columns: 1fr 400px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .header {
@@ -31,7 +31,7 @@
 .deepImage {
     width: 100%;
     height: auto;
-    margin: 10 auto;
+    margin: auto auto;
 }
 
 .footer {
@@ -43,5 +43,5 @@
 }
 
 .loader {
-    margin: 0 auto;
+    margin: 10px auto;
 }
