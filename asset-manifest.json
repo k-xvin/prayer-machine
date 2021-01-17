@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/prayer-machine/static/css/main.0b5bec15.chunk.css",
+    "main.css": "/prayer-machine/static/css/main.2bdaaecb.chunk.css",
     "main.js": "/prayer-machine/static/js/main.999767c9.chunk.js",
     "main.js.map": "/prayer-machine/static/js/main.999767c9.chunk.js.map",
     "runtime-main.js": "/prayer-machine/static/js/runtime-main.5e206f49.js",
@@ -10,7 +10,7 @@
     "static/js/3.94c328bb.chunk.js": "/prayer-machine/static/js/3.94c328bb.chunk.js",
     "static/js/3.94c328bb.chunk.js.map": "/prayer-machine/static/js/3.94c328bb.chunk.js.map",
     "index.html": "/prayer-machine/index.html",
-    "static/css/main.0b5bec15.chunk.css.map": "/prayer-machine/static/css/main.0b5bec15.chunk.css.map",
+    "static/css/main.2bdaaecb.chunk.css.map": "/prayer-machine/static/css/main.2bdaaecb.chunk.css.map",
     "static/js/2.8d654b14.chunk.js.LICENSE.txt": "/prayer-machine/static/js/2.8d654b14.chunk.js.LICENSE.txt",
     "static/media/App.css": "/prayer-machine/static/media/god.9f3749ee.jpg",
     "static/media/logo.6ce24c58.svg": "/prayer-machine/static/media/logo.6ce24c58.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.5e206f49.js",
     "static/js/2.8d654b14.chunk.js",
-    "static/css/main.0b5bec15.chunk.css",
+    "static/css/main.2bdaaecb.chunk.css",
     "static/js/main.999767c9.chunk.js"
   ]
 }
