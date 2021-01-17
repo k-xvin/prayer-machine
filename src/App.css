@@ -41,3 +41,7 @@
     background-position: bottom;
     background-size: contain;
 }
+
+.loader {
+    margin: 0 auto;
+}

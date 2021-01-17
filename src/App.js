@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import logo from './logo.svg';
 import './App.css';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 function App() {    
     const deepai = require('deepai');
@@ -57,6 +58,7 @@ function App() {
                     className="deepImage"
                     src={deepImageURL}>
                 </img>
+                {isLoading ? <div className="loader"><CircularProgress color="white"/></div> : null}
             </div>
             <div className="footer"> </div>
         </div>
