@@ -11,11 +11,15 @@ function App() {
     // Holds the url to the image from deepai
     let [deepImageURL, setDeepImageURL] = useState("");
 
+    //sets the class animation
+    let [animateDrop, setAnimateDrop] = useState("");
+
     // Track the loading
     let [isLoading, setIsLoading] = useState(false);
 
     async function getTextToImage(){
         setIsLoading(true);
+        setAnimateDrop("");
 
         // Get an DeepAI image
         var godImage = await deepai.callStandardApi("text2img", {
@@ -30,6 +34,8 @@ function App() {
         console.log(dreamedGod);
 
         setDeepImageURL(dreamedGod.output_url);
+
+        setAnimateDrop("slide-in-top");
 
         setIsLoading(false);
 
@@ -58,7 +64,7 @@ function App() {
                     Pray
                 </button>
                 <img 
-                    className="deepImage"
+                    className= {"deepImage " + animateDrop} 
                     src={deepImageURL}>
                 </img>
                 {isLoading ? <div className="loader"><CircularProgress color="white"/></div> : null}
