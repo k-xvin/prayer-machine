@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import logo from './logo.svg';
 import './App.css';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
-function App() {    
+function App() {
     const deepai = require('deepai');
-    
+
     deepai.setApiKey(process.env.REACT_APP_DEEPAI_KEY);
 
     // Holds the url to the image from deepai
@@ -17,7 +17,7 @@ function App() {
     // Track the loading
     let [isLoading, setIsLoading] = useState(false);
 
-    async function getTextToImage(){
+    async function getTextToImage() {
         setIsLoading(true);
         setAnimateDrop("");
 
@@ -48,28 +48,34 @@ function App() {
                 <div className="noise"> </div>
             </div>
             <div className="header"> </div>
-            <div className="center"> 
-                <div> 
+            <div className="center">
+                <div>
                     welcome to church
                 </div>
                 <button
-                    style={{width:"100px", margin:"0 auto"}}
+                    style={{ width: "100px", margin: "0 auto" }}
                     onClick={() => {
-                        if(!isLoading){
+                        if (!isLoading) {
                             console.log("calling images");
-                            getTextToImage()  
+                            getTextToImage()
                         }
                     }}
-                > 
+                >
                     Pray
                 </button>
-                <img 
-                    className= {"deepImage " + animateDrop} 
+                <img
+                    className={"deepImage " + animateDrop}
                     src={deepImageURL}>
                 </img>
-                {isLoading ? <div className="loader"><CircularProgress color="white"/></div> : null}
+                {isLoading ? <div className="loader"><CircularProgress color="white" /></div> : null}
             </div>
-            <div className="footer"> </div>
+            <div className="footer">
+                <form
+                    style={{ width: "100px", margin: "0 auto" }}
+                    action="https://pisslake.github.io/p5js-testground/">
+                    <input type="submit" value="sin" />
+                </form>
+            </div>
         </div>
     );
 }
